@@ -2,7 +2,7 @@
 
 В **Cross-Check: Submit** нужна ссылка на **Pull Request**, не на репозиторий и не на деплой.
 
-Сдаточный PR: `memory-game` → `main`. Он открыт с начала работы, в Cross-Check: Submit его отправлять после `feat/readme-deploy`. До этого не сдавать.
+Сдаточный PR: https://github.com/Bogagree/memory-game/pull/1 (`memory-game` → `main`). Он открыт с начала работы, в Cross-Check: Submit его отправлять после `feat/readme-deploy`. До этого не сдавать.
 
 Шаги игры — отдельные PR в `memory-game`, не в `main`.
 
