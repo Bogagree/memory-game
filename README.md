@@ -1,31 +1,30 @@
-# RS School — Memory Game
+# Поиск пар
 
-Учебный проект курса: игра на поиск пар на HTML, CSS и чистом JavaScript. Игрок открывает карточки и запоминает их расположение, чтобы найти все совпадения за наименьшее число ходов.
+Игра на поиск пар. На поле 16 карточек: 8 изображений, каждое дважды. Игрок открывает две карточки за ход и ищет все совпадения за наименьшее число ходов. После победы результат один раз сохраняется в таблице лидеров в этом браузере.
+
+Картинки — собственные SVG (солнце, луна, звезда, лист, капля, молния, сердце, кристалл и рубашка). Отдельную лицензию указывать не нужно.
+
+## Как запустить локально
+
+Нужны Git и Node.js. Страницу нельзя открыть двойным щелчком по `index.html`: скрипт подключён как модуль, поэтому нужен локальный сервер.
+
+```bash
+git clone https://github.com/Bogagree/memory-game.git
+cd memory-game
+git checkout memory-game
+npx serve .
+```
+
+Откройте адрес, который напечатает `serve`. Обычно это `http://localhost:3000`.
+
+При загрузке карточки перемешаны и лежат рубашкой вверх, счётчики — «0 ходов» и «0 из 8». «Новая игра» начинает партию заново без перезагрузки. «Таблица лидеров» показывает до 10 лучших результатов и не сбрасывает текущее поле.
+
+## Деплой
+
+https://bogagree.github.io/memory-game/
 
 ## Задание
 
-- [Memory Game](https://github.com/rolling-scopes-school/tasks/blob/master/tasks/memory-game/README.md)
+[Memory Game](https://github.com/rolling-scopes-school/tasks/blob/master/tasks/memory-game/README.md)
 
-## SDD
-
-Проект ведётся по Spec-Driven Development. Старт: [docs/README.md](docs/README.md).
-
-| Сейчас | Путь |
-| --- | --- |
-| Следующий шаг | [docs/plan.md](docs/plan.md) → `## Next` |
-| Решения | [docs/decisions.md](docs/decisions.md) |
-
-## Ветки
-
-| Ветка | Назначение |
-| --- | --- |
-| `main` | Служебные файлы |
-| `memory-game` | Приложение → PR в `main` (не мержить) |
-
-## Сдача
-
-[docs/submit-checklist.md](docs/submit-checklist.md) — в Cross-Check: Submit нужна ссылка на **Pull Request**.
-
-## Автор
-
-[Bogagree](https://github.com/Bogagree)
+Как устроен репозиторий и сдача: [docs/README.md](docs/README.md), [docs/submit-checklist.md](docs/submit-checklist.md).

@@ -11,10 +11,10 @@
 ## Next (для нового чата)
 
 ```text
-feat/new-game
+feat/readme-deploy
 ```
 
-Спека шага: [specs/game.md](./specs/game.md), [specs/header.md](./specs/header.md). Рестарт из хедера и из победы, отмена таймера несовпадения. README и деплой — следующий шаг.
+Спека шага: [submit-checklist.md](./submit-checklist.md). README с локальным запуском, GitHub Pages и описание сдаточного PR.
 
 ---
 
@@ -33,7 +33,7 @@ main
     ├── [done] feat/mismatch-counters      # закрытие через 1000 мс, замок, ходы и пары
     ├── [done] feat/win-modal              # общая модалка + победа
     ├── [done] feat/leaderboard            # топ-10, localStorage
-    ├── [    ] feat/new-game               # рестарт из хедера и из победы, отмена таймера
+    ├── [done] feat/new-game               # рестарт из хедера и из победы, отмена таймера
     └── [    ] feat/readme-deploy          # инструкция запуска, Pages, PR body
 ```
 
