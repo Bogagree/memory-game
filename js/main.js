@@ -2,12 +2,54 @@ import { createBoard, renderBoard } from './board.js';
 import { el } from './dom.js';
 import { closeMismatch, flipCard, MISMATCH_DELAY_MS, startGame } from './game.js';
 import { createHeader } from './header.js';
+import { createModal } from './modal.js';
 
 const { header, moves, pairs } = createHeader();
 const board = createBoard();
 const main = el('main', { children: [board] });
+const modal = createModal();
 
 let state = startGame();
+let winModalOpened = false;
+
+function openWinModal() {
+  const closeButton = el('button', {
+    className: 'modal__button',
+    text: 'Закрыть',
+    attrs: { type: 'button' },
+  });
+
+  closeButton.addEventListener('click', () => {
+    modal.close();
+  });
+
+  modal.root.setAttribute('aria-labelledby', 'win-title');
+  modal.open(el('div', {
+    className: 'modal__win',
+    children: [
+      el('h2', {
+        className: 'modal__title',
+        text: 'Победа',
+        attrs: { id: 'win-title' },
+      }),
+      el('p', {
+        className: 'modal__moves',
+        text: `${state.moves} ходов`,
+      }),
+      el('div', {
+        className: 'modal__actions',
+        children: [
+          el('button', {
+            className: 'modal__button',
+            text: 'Новая игра',
+            attrs: { type: 'button' },
+          }),
+          closeButton,
+        ],
+      }),
+    ],
+  }));
+}
 
 function paint() {
   moves.textContent = `${state.moves} ходов`;
@@ -30,7 +72,12 @@ function paint() {
 
     paint();
   });
+
+  if (state.phase === 'won' && !winModalOpened) {
+    winModalOpened = true;
+    openWinModal();
+  }
 }
 
-document.body.append(header, main);
+document.body.append(header, main, modal.root);
 paint();
