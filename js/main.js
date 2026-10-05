@@ -1,17 +1,24 @@
 import { createBoard, renderBoard } from './board.js';
-import { createDeck } from './cards.js';
 import { el } from './dom.js';
+import { flipCard, startGame } from './game.js';
 import { createHeader } from './header.js';
-import { fisherYates } from './shuffle.js';
 
 const { header } = createHeader();
 const board = createBoard();
 const main = el('main', { children: [board] });
 
-document.body.append(header, main);
+let state = startGame();
 
-function startGame() {
-  renderBoard(board, fisherYates(createDeck()));
+function paint() {
+  renderBoard(board, state.cards, (cardId) => {
+    const next = flipCard(state, cardId);
+    if (next === state) {
+      return;
+    }
+    state = next;
+    paint();
+  });
 }
 
-startGame();
+document.body.append(header, main);
+paint();
