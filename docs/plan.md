@@ -11,10 +11,10 @@
 ## Next (для нового чата)
 
 ```text
-feat/leaderboard
+feat/new-game
 ```
 
-Спека шага: [specs/leaderboard.md](./specs/leaderboard.md). Топ-10 в общей модалке и одна запись в `localStorage` при победе. Рестарт — следующий шаг.
+Спека шага: [specs/game.md](./specs/game.md), [specs/header.md](./specs/header.md). Рестарт из хедера и из победы, отмена таймера несовпадения. README и деплой — следующий шаг.
 
 ---
 
@@ -32,7 +32,7 @@ main
     ├── [done] feat/flip-pair              # две карточки, совпадение остаётся, лишние клики игнор
     ├── [done] feat/mismatch-counters      # закрытие через 1000 мс, замок, ходы и пары
     ├── [done] feat/win-modal              # общая модалка + победа
-    ├── [    ] feat/leaderboard            # топ-10, localStorage
+    ├── [done] feat/leaderboard            # топ-10, localStorage
     ├── [    ] feat/new-game               # рестарт из хедера и из победы, отмена таймера
     └── [    ] feat/readme-deploy          # инструкция запуска, Pages, PR body
 ```

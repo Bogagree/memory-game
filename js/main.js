@@ -1,11 +1,11 @@
 import { createBoard, renderBoard } from './board.js';
 import { el } from './dom.js';
-import { closeMismatch, flipCard, MISMATCH_DELAY_MS, startGame } from './game.js';
+import { cancelMismatch, closeMismatch, flipCard, MISMATCH_DELAY_MS, startGame } from './game.js';
 import { createHeader } from './header.js';
 import { createLeaderboardContent, saveResult } from './leaderboard.js';
 import { createModal } from './modal.js';
 
-const { header, leaderboardButton, moves, pairs } = createHeader();
+const { header, newGameButton, leaderboardButton, moves, pairs } = createHeader();
 const board = createBoard();
 const main = el('main', { children: [board] });
 const modal = createModal();
@@ -13,13 +13,27 @@ const modal = createModal();
 let state = startGame();
 let winModalOpened = false;
 
+function startNewGame() {
+  state = cancelMismatch(state);
+  modal.close();
+  winModalOpened = false;
+  state = startGame();
+  paint();
+}
+
 function openWinModal() {
+  const restartButton = el('button', {
+    className: 'modal__button',
+    text: 'Новая игра',
+    attrs: { type: 'button' },
+  });
   const closeButton = el('button', {
     className: 'modal__button',
     text: 'Закрыть',
     attrs: { type: 'button' },
   });
 
+  restartButton.addEventListener('click', startNewGame);
   closeButton.addEventListener('click', () => {
     modal.close();
   });
@@ -39,14 +53,7 @@ function openWinModal() {
       }),
       el('div', {
         className: 'modal__actions',
-        children: [
-          el('button', {
-            className: 'modal__button',
-            text: 'Новая игра',
-            attrs: { type: 'button' },
-          }),
-          closeButton,
-        ],
+        children: [restartButton, closeButton],
       }),
     ],
   }));
@@ -84,6 +91,8 @@ function paint() {
     openWinModal();
   }
 }
+
+newGameButton.addEventListener('click', startNewGame);
 
 leaderboardButton.addEventListener('click', () => {
   modal.root.setAttribute('aria-labelledby', 'leaderboard-title');
