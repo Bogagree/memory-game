@@ -20,10 +20,10 @@
 
 Шаблон описания: [.github/PULL_REQUEST_TEMPLATE.md](../.github/PULL_REQUEST_TEMPLATE.md). Требования курса: [PR requirements](https://rs.school/docs/short-track/pull-request-requirements).
 
-## GitHub Pages (когда есть `index.html`)
+## GitHub Pages
 
-Settings → Pages → branch `memory-game`, folder `/`.
-URL: `https://bogagree.github.io/memory-game/`
+Включено: ветка `memory-game`, папка `/`.
+URL: https://bogagree.github.io/memory-game/
 
 ## Самооценка (все пункты)
 
