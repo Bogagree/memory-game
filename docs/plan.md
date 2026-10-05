@@ -11,10 +11,10 @@
 ## Next (для нового чата)
 
 ```text
-feat/mismatch-counters
+feat/win-modal
 ```
 
-Спека шага: [specs/game.md](./specs/game.md), [specs/counters.md](./specs/counters.md). Несовпадение закрывается через 1000 мс, ходы и пары считаются. Модалка победы — следующий шаг.
+Спека шага: [specs/modal.md](./specs/modal.md). Общая модалка и окно победы. Рестарт и таблица лидеров — следующие шаги.
 
 ---
 
@@ -30,7 +30,7 @@ main
     ├── [done] feat/board                  # 16 закрытых карточек, старт при загрузке
     ├── [done] feat/shuffle                # Фишер–Йейтс при загрузке
     ├── [done] feat/flip-pair              # две карточки, совпадение остаётся, лишние клики игнор
-    ├── [    ] feat/mismatch-counters      # закрытие через 1000 мс, замок, ходы и пары
+    ├── [done] feat/mismatch-counters      # закрытие через 1000 мс, замок, ходы и пары
     ├── [    ] feat/win-modal              # общая модалка + победа
     ├── [    ] feat/leaderboard            # топ-10, localStorage
     ├── [    ] feat/new-game               # рестарт из хедера и из победы, отмена таймера
