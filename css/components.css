@@ -102,11 +102,32 @@ body.modal-open {
   min-width: 16rem;
 }
 
-.modal__win {
+.modal__win,
+.modal__leaderboard {
   display: flex;
   flex-direction: column;
   gap: var(--space-m);
   padding: var(--space-l);
+}
+
+.leaderboard {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.leaderboard th,
+.leaderboard td {
+  padding: 0.35rem 0.5rem 0.35rem 0;
+  text-align: left;
+}
+
+.leaderboard th {
+  color: var(--color-muted);
+  font-weight: 600;
+}
+
+.leaderboard__empty {
+  margin: 0;
 }
 
 .modal__title,

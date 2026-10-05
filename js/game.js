@@ -15,6 +15,7 @@ export function startGame() {
     phase: 'idle',
     openCardId: null,
     mismatchTimerId: null,
+    resultSaved: false,
   };
 }
 
