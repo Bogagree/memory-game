@@ -11,10 +11,10 @@
 ## Next (для нового чата)
 
 ```text
-feat/shuffle
+feat/flip-pair
 ```
 
-Спека шага: [specs/board.md](./specs/board.md). Случайный порядок при загрузке. Переворот — следующий шаг.
+Спека шага: [specs/game.md](./specs/game.md). Две карточки, совпадение остаётся открытым. Закрытие несовпадения и счётчики — следующий шаг.
 
 ---
 
@@ -28,7 +28,7 @@ main
     ├── [done] docs: sdd skeleton          # docs по образцу landing-page
     ├── [done] feat/app-shell              # index.html, el(), хедер, счётчики 0, пустое поле
     ├── [done] feat/board                  # 16 закрытых карточек, старт при загрузке
-    ├── [    ] feat/shuffle                # Фишер–Йейтс при загрузке
+    ├── [done] feat/shuffle                # Фишер–Йейтс при загрузке
     ├── [    ] feat/flip-pair              # две карточки, совпадение остаётся, лишние клики игнор
     ├── [    ] feat/mismatch-counters      # закрытие через 1000 мс, замок, ходы и пары
     ├── [    ] feat/win-modal              # общая модалка + победа

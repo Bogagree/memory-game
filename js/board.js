@@ -7,13 +7,13 @@ export function createBoard() {
   });
 }
 
-export function renderBoard(board, cards) {
+export function renderBoard(board, cards, onCardClick) {
   board.replaceChildren(
-    ...cards.map((card, index) => createCard(card, index)),
+    ...cards.map((card, index) => createCard(card, index, onCardClick)),
   );
 }
 
-function createCard(card, index) {
+function createCard(card, index, onCardClick) {
   const back = el('span', {
     className: 'card__back',
     attrs: { 'aria-hidden': 'true' },
@@ -27,8 +27,8 @@ function createCard(card, index) {
     },
   });
 
-  return el('button', {
-    className: 'card',
+  const button = el('button', {
+    className: card.isFaceUp ? 'card card--flipped' : 'card',
     attrs: {
       type: 'button',
       'data-card-id': card.id,
@@ -37,4 +37,10 @@ function createCard(card, index) {
     },
     children: [back, face],
   });
+
+  button.addEventListener('click', () => {
+    onCardClick(card.id);
+  });
+
+  return button;
 }
