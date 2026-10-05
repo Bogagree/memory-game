@@ -67,6 +67,19 @@ export function flipCard(state, cardId) {
   };
 }
 
+export function cancelMismatch(state) {
+  if (state.mismatchTimerId === null) {
+    return state;
+  }
+
+  clearTimeout(state.mismatchTimerId);
+
+  return {
+    ...state,
+    mismatchTimerId: null,
+  };
+}
+
 export function closeMismatch(state) {
   if (state.phase !== 'locked') {
     return state;
