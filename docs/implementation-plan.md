@@ -25,7 +25,7 @@
 
 ## Как пользоваться
 
-1. Открыть [plan.md](./plan.md): блок **`## Next`** + спеку шага; свериться с **decisions**.
+1. Следующий шаг запускает скилл `.cursor/skills/memory-game-next-step/SKILL.md` (фраза: «следующий шаг»). Он читает блок **`## Next`** в [plan.md](./plan.md), спеку шага и **decisions**.
 2. Шаги сверху вниз. Один шаг = одна `feat/*` = один короткий контекст чата.
 3. После merge шага в `memory-game` — `[done]` и сдвиг `## Next`.
 4. Git: [conventions/git.md](./conventions/git.md).
