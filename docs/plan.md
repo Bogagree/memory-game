@@ -11,10 +11,10 @@
 ## Next (для нового чата)
 
 ```text
-feat/board
+feat/shuffle
 ```
 
-Спека шага: [specs/board.md](./specs/board.md). 16 закрытых карточек при загрузке. Перемешивание — следующий шаг.
+Спека шага: [specs/board.md](./specs/board.md). Случайный порядок при загрузке. Переворот — следующий шаг.
 
 ---
 
@@ -27,7 +27,7 @@ main
 └── memory-game
     ├── [done] docs: sdd skeleton          # docs по образцу landing-page
     ├── [done] feat/app-shell              # index.html, el(), хедер, счётчики 0, пустое поле
-    ├── [    ] feat/board                  # 16 закрытых карточек, старт при загрузке
+    ├── [done] feat/board                  # 16 закрытых карточек, старт при загрузке
     ├── [    ] feat/shuffle                # Фишер–Йейтс при загрузке
     ├── [    ] feat/flip-pair              # две карточки, совпадение остаётся, лишние клики игнор
     ├── [    ] feat/mismatch-counters      # закрытие через 1000 мс, замок, ходы и пары
