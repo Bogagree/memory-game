@@ -14,7 +14,7 @@
 feat/readme-deploy
 ```
 
-Спека шага: [submit-checklist.md](./submit-checklist.md). README с локальным запуском, GitHub Pages и описание сдаточного PR.
+План закрыт: этот пункт влит в `memory-game`, следующих пунктов нет. Сдаточный PR `memory-game` → `main` не мержить.
 
 ---
 
@@ -34,7 +34,7 @@ main
     ├── [done] feat/win-modal              # общая модалка + победа
     ├── [done] feat/leaderboard            # топ-10, localStorage
     ├── [done] feat/new-game               # рестарт из хедера и из победы, отмена таймера
-    └── [    ] feat/readme-deploy          # инструкция запуска, Pages, PR body
+    └── [done] feat/readme-deploy          # инструкция запуска, Pages, PR body
 ```
 
 | Шаг | Спека | Баллы, которые закрывает |
