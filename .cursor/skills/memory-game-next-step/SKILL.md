@@ -33,8 +33,9 @@ description: >-
 4. Смена поведения — обнови спеку в том же PR.
 5. Шаг с интерфейсом проверь в браузере: пройди сценарий кликами, не одним скриншотом. Отчёт: `docs/qa/<имя без feat/>.md`. Шаг только из документации — без QA-файла.
 6. Коммит по [RS git convention](https://rs.school/docs/git-convention). `git push -u origin HEAD`.
-7. `gh pr create --base memory-game`. В теле: Summary, Test plan, ссылки на спеки и QA. Чеклист курса не заполняй. Футер `Made with Cursor` не добавляй.
-8. Feature-PR не мержи.
+7. Перед `gh pr create` проверь, что в PR нет строки `Made with Cursor`. Ищи её в `git diff origin/memory-game...HEAD` и в тексте, который уйдёт в `--body` и `--title`. Если строка есть — убери её, закоммить, запушь и проверь снова. Пока она находится, PR не создавай.
+8. `gh pr create --base memory-game`. В теле: Summary, Test plan, ссылки на спеки и QA. Чеклист курса не заполняй.
+9. Feature-PR не мержи.
 
 ## Пример
 
