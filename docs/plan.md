@@ -11,10 +11,10 @@
 ## Next (для нового чата)
 
 ```text
-feat/app-shell
+feat/board
 ```
 
-Спека шага: [specs/architecture.md](./specs/architecture.md). Каркас страницы без игровых правил.
+Спека шага: [specs/board.md](./specs/board.md). 16 закрытых карточек при загрузке. Перемешивание — следующий шаг.
 
 ---
 
@@ -26,7 +26,7 @@ feat/app-shell
 main
 └── memory-game
     ├── [done] docs: sdd skeleton          # docs по образцу landing-page
-    ├── [    ] feat/app-shell              # index.html, el(), хедер, счётчики 0, пустое поле
+    ├── [done] feat/app-shell              # index.html, el(), хедер, счётчики 0, пустое поле
     ├── [    ] feat/board                  # 16 закрытых карточек, старт при загрузке
     ├── [    ] feat/shuffle                # Фишер–Йейтс при загрузке
     ├── [    ] feat/flip-pair              # две карточки, совпадение остаётся, лишние клики игнор

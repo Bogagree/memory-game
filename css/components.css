@@ -43,10 +43,55 @@
 }
 
 .board {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-s);
   max-width: var(--page-width);
-  min-height: 18rem;
   margin: var(--space-l) auto var(--space-l);
+  padding: var(--space-m);
   border-radius: var(--radius);
   background: var(--color-board);
   box-shadow: inset 0 0 0 0.5rem var(--color-board-edge);
+}
+
+.card {
+  position: relative;
+  aspect-ratio: 1;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: calc(var(--radius) / 2);
+  background: transparent;
+  cursor: pointer;
+}
+
+.card:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 3px;
+}
+
+.card__back,
+.card__face {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.card__back {
+  background: var(--color-card-back) url("../assets/images/back.svg") center / cover no-repeat;
+}
+
+.card__face {
+  object-fit: cover;
+  visibility: hidden;
+}
+
+.card--flipped .card__back {
+  visibility: hidden;
+}
+
+.card--flipped .card__face {
+  visibility: visible;
 }

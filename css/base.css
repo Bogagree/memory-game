@@ -6,12 +6,13 @@
   --color-button-text: #f7f3ea;
   --color-board: #1f4d3a;
   --color-board-edge: #17392b;
+  --color-card-back: #efe6d6;
   --color-focus: #c9842a;
   --space-s: 0.5rem;
   --space-m: 1rem;
   --space-l: 1.5rem;
   --radius: 0.75rem;
-  --page-width: 40rem;
+  --page-width: 28rem;
   --font: "Segoe UI", system-ui, sans-serif;
 }
 
