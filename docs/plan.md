@@ -11,10 +11,10 @@
 ## Next (для нового чата)
 
 ```text
-feat/win-modal
+feat/leaderboard
 ```
 
-Спека шага: [specs/modal.md](./specs/modal.md). Общая модалка и окно победы. Рестарт и таблица лидеров — следующие шаги.
+Спека шага: [specs/leaderboard.md](./specs/leaderboard.md). Топ-10 в общей модалке и одна запись в `localStorage` при победе. Рестарт — следующий шаг.
 
 ---
 
@@ -31,7 +31,7 @@ main
     ├── [done] feat/shuffle                # Фишер–Йейтс при загрузке
     ├── [done] feat/flip-pair              # две карточки, совпадение остаётся, лишние клики игнор
     ├── [done] feat/mismatch-counters      # закрытие через 1000 мс, замок, ходы и пары
-    ├── [    ] feat/win-modal              # общая модалка + победа
+    ├── [done] feat/win-modal              # общая модалка + победа
     ├── [    ] feat/leaderboard            # топ-10, localStorage
     ├── [    ] feat/new-game               # рестарт из хедера и из победы, отмена таймера
     └── [    ] feat/readme-deploy          # инструкция запуска, Pages, PR body

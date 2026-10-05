@@ -2,9 +2,10 @@ import { createBoard, renderBoard } from './board.js';
 import { el } from './dom.js';
 import { closeMismatch, flipCard, MISMATCH_DELAY_MS, startGame } from './game.js';
 import { createHeader } from './header.js';
+import { createLeaderboardContent, saveResult } from './leaderboard.js';
 import { createModal } from './modal.js';
 
-const { header, moves, pairs } = createHeader();
+const { header, leaderboardButton, moves, pairs } = createHeader();
 const board = createBoard();
 const main = el('main', { children: [board] });
 const modal = createModal();
@@ -73,11 +74,23 @@ function paint() {
     paint();
   });
 
+  if (state.phase === 'won' && !state.resultSaved) {
+    saveResult(state.moves);
+    state = { ...state, resultSaved: true };
+  }
+
   if (state.phase === 'won' && !winModalOpened) {
     winModalOpened = true;
     openWinModal();
   }
 }
+
+leaderboardButton.addEventListener('click', () => {
+  modal.root.setAttribute('aria-labelledby', 'leaderboard-title');
+  modal.open(createLeaderboardContent(() => {
+    modal.close();
+  }));
+});
 
 document.body.append(header, main, modal.root);
 paint();
