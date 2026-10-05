@@ -11,6 +11,7 @@ Memory Game ведётся по **SDD** (как в [rsschool-landing-page](https
 | [conventions/](./conventions/) | Код, git, PR |
 | [implementation-plan.md](./implementation-plan.md) | Общий порядок работ |
 | [plan.md](./plan.md) | Чеклист шагов |
+| [Скилл следующего шага](../.cursor/skills/memory-game-next-step/SKILL.md) | Запускает пункт из `## Next` |
 | [qa/](./qa/) | Отчёты проверки шага (`docs/qa/<step>.md`) |
 | [submit-checklist.md](./submit-checklist.md) | Сдача cross-check |
 
