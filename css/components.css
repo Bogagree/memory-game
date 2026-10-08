@@ -2,8 +2,9 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
-  gap: var(--space-m);
+  justify-content: flex-start;
+  column-gap: var(--space-s);
+  row-gap: var(--space-s);
   max-width: var(--page-width);
   margin: 0 auto;
   padding: var(--space-l) var(--space-m) 0;
@@ -17,9 +18,11 @@
 
 .counters {
   display: flex;
-  gap: var(--space-m);
-  margin: 0;
+  flex-shrink: 0;
+  gap: var(--space-s);
+  margin: 0 0 0 auto;
   color: var(--color-muted);
+  white-space: nowrap;
 }
 
 .counters p {
